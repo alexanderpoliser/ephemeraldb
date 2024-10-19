@@ -1,3 +1,6 @@
+
+![ephemeraldb](https://github.com/user-attachments/assets/ee1c6518-53aa-4346-b8c6-ff5cb21f63a6)
+
 # NoSQL Database in Go  
 
 This project provides a simple NoSQL database implementation in Go. It offers basic functionalities such as storing, retrieving, deleting data, and persisting buckets in JSON files. Additionally, the interactive menu allows users to manage data directly through the terminal.
@@ -75,12 +78,12 @@ After launching the program, you'll see a menu with the following options:
 
 - **Save bucket to file:**  
   - Select option 4.
-  - Provide the bucket name and the desired filename (seting `.json` as the file format).
+  - Provide the bucket name and the desired filename (setting `.json` as the file format).
   - The bucket will be saved in the `data/` directory.
 
 - **Load bucket from file:**  
   - Select option 5.
-  - Provide the bucket name and the filename (seting `.json` as the file format) to load from.
+  - Provide the bucket name and the filename (setting `.json` as the file format) to load from.
 
 ---
 
