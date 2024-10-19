@@ -41,7 +41,7 @@ This project provides a simple NoSQL database implementation in Go. It offers ba
 
 2. **In your terminal run the program:**  
    ```bash
-   go run *.go
+   go run cmd/main.go
    ```
 ---
 
@@ -88,15 +88,20 @@ After launching the program, you'll see a menu with the following options:
 
 ```
 ephemeraldb/
-├── data/                 # Directory for storing JSON files
-├── db.go                 # Database logic
-├── go.mod                # Go module file
-├── go.sum                # Dependencies checksum file
-├── logo.txt              # ASCII art for the menu
-├── main.go               # Main application code
-├── menu.go               # Interactive menu logic
-├── README.md             # Project documentation
-└── utils.go              # Utility functions
+├── cmd/                     # Main entry point of the application
+│   └── main.go              # Code that starts the program
+├── internal/                # Internal logic of the application
+│   ├── db/                  # Database logic
+│   │   └── db.go            # Implementation of the NoSQLDB
+│   ├── menu/                # Logic for the interactive menu
+│   │   └── menu.go          # Menu code
+│   └── utils/               # Utility functions
+│       └── utils.go         # Various utilities
+├── data/                    # Directory to store JSON files
+├── go.mod                   # Go module file
+├── go.sum                   # Checksum file for dependencies
+├── logo.txt                 # ASCII art displayed in the menu
+└── README.md                # Project documentation
 ```
 
 ---
@@ -170,7 +175,7 @@ Este projeto oferece uma implementação simples de banco de dados NoSQL em Go. 
 
 2. **No terminal execute o programa:**  
    ```bash
-   go run *.go
+   go run cmd/main.go
    ```
 ---
 
@@ -217,15 +222,20 @@ Ao executar o programa, você verá um menu com as seguintes opções:
 
 ```
 ephemeraldb/
-├── data/                 # Diretório para armazenar arquivos JSON
-├── db.go                 # Lógica do banco de dados
-├── go.mod                # Arquivo de módulo do Go
-├── go.sum                # Arquivo de checksum das dependências
-├── logo.txt              # Arte ASCII exibida no menu
-├── main.go               # Código principal da aplicação
-├── menu.go               # Lógica do menu interativo
-├── README.md             # Documentação do projeto
-└── utils.go              # Funções utilitárias
+├── cmd/                     # Entrada principal da aplicação
+│   └── main.go              # Código que inicia o programa
+├── internal/                # Lógica interna do aplicativo
+│   ├── db/                  # Lógica do banco de dados
+│   │   └── db.go            # Implementação da NoSQLDB
+│   ├── menu/                # Lógica do menu interativo
+│   │   └── menu.go          # Código do menu
+│   └── utils/               # Funções auxiliares
+│       └── utils.go         # Utilitários diversos
+├── data/                    # Diretório para armazenar arquivos JSON
+├── go.mod                   # Arquivo de módulo do Go
+├── go.sum                   # Arquivo de checksum das dependências
+├── logo.txt                 # Arte ASCII exibida no menu
+└── README.md                # Documentação do projeto
 ```
 
 ---

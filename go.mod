@@ -1,3 +1,3 @@
-module nosql-database-go
+module ephemeraldb
 
 go 1.23.2

@@ -1,4 +1,4 @@
-package main
+package db
 
 import (
 	"encoding/json"
@@ -62,6 +62,12 @@ func (db *NoSQLDB) GetAll(bucket string) {
 	} else {
 		fmt.Println("Bucket", bucket, "not found.")
 	}
+}
+
+// BucketExists checks if a bucket exists.
+func (db *NoSQLDB) BucketExists(bucket string) bool {
+	_, ok := db.buckets[bucket]
+	return ok
 }
 
 // Removes the selected bucket

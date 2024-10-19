@@ -1,9 +1,11 @@
-package main
+package menu
 
 import (
 	"bufio"
 	"bytes"
 	"encoding/json"
+	"ephemeraldb/internal/db"
+	"ephemeraldb/internal/utils"
 	"fmt"
 	"os"
 	"strings"
@@ -28,28 +30,28 @@ func showMenu() {
 	fmt.Println("7. Exit")
 }
 
-func RunMenu(db *NoSQLDB) {
+func RunMenu(database *db.NoSQLDB) {
 	var option int
 
 	for {
-		clearTerminal()
+		utils.ClearTerminal()
 		showMenu()
 		fmt.Print("Choose an option: ")
 		fmt.Scan(&option)
 
 		switch option {
 		case 1:
-			handleSet(db)
+			handleSet(database)
 		case 2:
-			handleGet(db)
+			handleGet(database)
 		case 3:
-			handleDelete(db)
+			handleDelete(database)
 		case 4:
-			handleSave(db)
+			handleSave(database)
 		case 5:
-			handleLoad(db)
+			handleLoad(database)
 		case 6:
-			db.ListBuckets()
+			database.ListBuckets()
 		case 7:
 			fmt.Println("Exiting...")
 			return
@@ -63,7 +65,7 @@ func RunMenu(db *NoSQLDB) {
 	}
 }
 
-func handleSet(db *NoSQLDB) {
+func handleSet(database *db.NoSQLDB) {
 	var bucket, key string
 	fmt.Print("Bucket name (or 'cancel' to return to menu): ")
 	fmt.Scan(&bucket)
@@ -99,11 +101,11 @@ func handleSet(db *NoSQLDB) {
 		return
 	}
 
-	db.Set(bucket, key, parsedValue)
+	database.Set(bucket, key, parsedValue)
 	fmt.Println("Value inserted successfully!")
 }
 
-func handleGet(db *NoSQLDB) {
+func handleGet(database *db.NoSQLDB) {
 	var bucket string
 	var option int
 	fmt.Print("Bucket name (or 'cancel' to return to menu): ")
@@ -123,40 +125,37 @@ func handleGet(db *NoSQLDB) {
 		var key string
 		fmt.Print("Key: ")
 		fmt.Scan(&key)
-		if value, exists := db.Get(bucket, key); exists {
+		if value, exists := database.Get(bucket, key); exists {
 			jsonValue, _ := json.MarshalIndent(value, "", "  ")
 			fmt.Println("Value:", string(jsonValue))
 		} else {
 			fmt.Println("Data not found.")
 		}
 	case 2:
-		db.GetAll(bucket)
+		database.GetAll(bucket)
 	default:
 		fmt.Println("Invalid option.")
 	}
 }
 
-func handleDelete(db *NoSQLDB) {
+func handleDelete(database *db.NoSQLDB) {
 	var bucket string
-	fmt.Print("Bucket name to delete: ")
-	_, err := fmt.Scan(&bucket)
+	fmt.Print("Bucket name to delete (or 'cancel' to return to menu): ")
+	fmt.Scan(&bucket) // Removed the _, err assignment, using fmt.Scan directly
+
 	if strings.ToLower(bucket) == "cancel" {
 		return
 	}
-	if err != nil {
-		fmt.Println("Error reading bucket name:", err)
-		return
-	}
 
-	if _, ok := db.buckets[bucket]; ok {
-		db.DeleteBucket(bucket)
-		fmt.Println("Bucket", bucket, "Removed successfully!")
+	if database.BucketExists(bucket) {
+		database.DeleteBucket(bucket)
+		fmt.Println("Bucket", bucket, "removed successfully!")
 	} else {
-		fmt.Println("Bucket", bucket, "Does not exist.")
+		fmt.Println("Bucket", bucket, "does not exist.")
 	}
 }
 
-func handleSave(db *NoSQLDB) {
+func handleSave(database *db.NoSQLDB) {
 	var bucket, filename string
 	fmt.Print("Bucket name (or 'cancel' to return to menu): ")
 	fmt.Scan(&bucket)
@@ -166,12 +165,12 @@ func handleSave(db *NoSQLDB) {
 	fmt.Print("File name: ")
 	fmt.Scan(&filename)
 
-	db.SaveBucketToFile(bucket, filename)
+	database.SaveBucketToFile(bucket, filename)
 
 	fmt.Println("File created successfully!")
 }
 
-func handleLoad(db *NoSQLDB) {
+func handleLoad(database *db.NoSQLDB) {
 	var bucket, filename string
 	fmt.Print("Bucket name (or 'cancel' to return to menu): ")
 	fmt.Scan(&bucket)
@@ -181,7 +180,7 @@ func handleLoad(db *NoSQLDB) {
 	fmt.Print("File name:")
 	fmt.Scan(&filename)
 
-	db.LoadBucketFromFile(bucket, filename)
+	database.LoadBucketFromFile(bucket, filename)
 
 	fmt.Println("Bucket loaded successfully!")
 }

@@ -1,4 +1,4 @@
-package main
+package utils
 
 import (
 	"os"
@@ -6,7 +6,7 @@ import (
 	"runtime"
 )
 
-func clearTerminal() {
+func ClearTerminal() {
 	var cmd *exec.Cmd
 	switch runtime.GOOS {
 	case "windows":
