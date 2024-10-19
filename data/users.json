@@ -1,0 +1,219 @@
+{
+  "1": {
+    "limit": 3,
+    "skip": 0,
+    "total": 208,
+    "users": [
+      {
+        "address": {
+          "address": "626 Main Street",
+          "city": "Phoenix",
+          "coordinates": {
+            "lat": -77.16213,
+            "lng": -92.084824
+          },
+          "country": "United States",
+          "postalCode": "29112",
+          "state": "Mississippi",
+          "stateCode": "MS"
+        },
+        "age": 28,
+        "bank": {
+          "cardExpire": "03/26",
+          "cardNumber": "9289760655481815",
+          "cardType": "Elo",
+          "currency": "CNY",
+          "iban": "YPUXISOBI7TTHPK2BR3HAIXL"
+        },
+        "birthDate": "1996-5-30",
+        "bloodGroup": "O-",
+        "company": {
+          "address": {
+            "address": "263 Tenth Street",
+            "city": "San Francisco",
+            "coordinates": {
+              "lat": 71.814525,
+              "lng": -161.150263
+            },
+            "country": "United States",
+            "postalCode": "37657",
+            "state": "Wisconsin",
+            "stateCode": "WI"
+          },
+          "department": "Engineering",
+          "name": "Dooley, Kozey and Cronin",
+          "title": "Sales Manager"
+        },
+        "crypto": {
+          "coin": "Bitcoin",
+          "network": "Ethereum (ERC20)",
+          "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a"
+        },
+        "ein": "977-175",
+        "email": "emily.johnson@x.dummyjson.com",
+        "eyeColor": "Green",
+        "firstName": "Emily",
+        "gender": "female",
+        "hair": {
+          "color": "Brown",
+          "type": "Curly"
+        },
+        "height": 193.24,
+        "id": 1,
+        "image": "https://dummyjson.com/icon/emilys/128",
+        "ip": "42.48.100.32",
+        "lastName": "Johnson",
+        "macAddress": "47:fa:41:18:ec:eb",
+        "maidenName": "Smith",
+        "password": "emilyspass",
+        "phone": "+81 965-431-3024",
+        "role": "admin",
+        "ssn": "900-590-289",
+        "university": "University of Wisconsin--Madison",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36",
+        "username": "emilys",
+        "weight": 63.16
+      },
+      {
+        "address": {
+          "address": "385 Fifth Street",
+          "city": "Houston",
+          "coordinates": {
+            "lat": 22.815468,
+            "lng": 115.608581
+          },
+          "country": "United States",
+          "postalCode": "38807",
+          "state": "Alabama",
+          "stateCode": "AL"
+        },
+        "age": 35,
+        "bank": {
+          "cardExpire": "02/27",
+          "cardNumber": "6737807858721625",
+          "cardType": "Elo",
+          "currency": "SEK",
+          "iban": "83IDT77FWYLCJVR8ISDACFH0"
+        },
+        "birthDate": "1989-8-10",
+        "bloodGroup": "B+",
+        "company": {
+          "address": {
+            "address": "395 Main Street",
+            "city": "Los Angeles",
+            "coordinates": {
+              "lat": 79.098326,
+              "lng": -119.624845
+            },
+            "country": "United States",
+            "postalCode": "73442",
+            "state": "New Hampshire",
+            "stateCode": "NH"
+          },
+          "department": "Support",
+          "name": "Spinka - Dickinson",
+          "title": "Support Specialist"
+        },
+        "crypto": {
+          "coin": "Bitcoin",
+          "network": "Ethereum (ERC20)",
+          "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a"
+        },
+        "ein": "912-602",
+        "email": "michael.williams@x.dummyjson.com",
+        "eyeColor": "Red",
+        "firstName": "Michael",
+        "gender": "male",
+        "hair": {
+          "color": "Green",
+          "type": "Straight"
+        },
+        "height": 186.22,
+        "id": 2,
+        "image": "https://dummyjson.com/icon/michaelw/128",
+        "ip": "12.13.116.142",
+        "lastName": "Williams",
+        "macAddress": "79:15:78:99:60:aa",
+        "maidenName": "",
+        "password": "michaelwpass",
+        "phone": "+49 258-627-6644",
+        "role": "admin",
+        "ssn": "108-953-962",
+        "university": "Ohio State University",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/97.0.1072.76 Safari/537.36",
+        "username": "michaelw",
+        "weight": 76.32
+      },
+      {
+        "address": {
+          "address": "1642 Ninth Street",
+          "city": "Washington",
+          "coordinates": {
+            "lat": 45.289366,
+            "lng": 46.832664
+          },
+          "country": "United States",
+          "postalCode": "32822",
+          "state": "Alabama",
+          "stateCode": "AL"
+        },
+        "age": 42,
+        "bank": {
+          "cardExpire": "04/25",
+          "cardNumber": "7795895470082859",
+          "cardType": "Korean Express",
+          "currency": "SEK",
+          "iban": "90XYKT83LMM7AARZ8JN958JC"
+        },
+        "birthDate": "1982-11-6",
+        "bloodGroup": "O-",
+        "company": {
+          "address": {
+            "address": "1896 Washington Street",
+            "city": "Dallas",
+            "coordinates": {
+              "lat": 20.086743,
+              "lng": -34.577107
+            },
+            "country": "United States",
+            "postalCode": "88511",
+            "state": "Nevada",
+            "stateCode": "NV"
+          },
+          "department": "Research and Development",
+          "name": "Schiller - Zieme",
+          "title": "Accountant"
+        },
+        "crypto": {
+          "coin": "Bitcoin",
+          "network": "Ethereum (ERC20)",
+          "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a"
+        },
+        "ein": "963-113",
+        "email": "sophia.brown@x.dummyjson.com",
+        "eyeColor": "Hazel",
+        "firstName": "Sophia",
+        "gender": "female",
+        "hair": {
+          "color": "White",
+          "type": "Wavy"
+        },
+        "height": 177.72,
+        "id": 3,
+        "image": "https://dummyjson.com/icon/sophiab/128",
+        "ip": "214.225.51.195",
+        "lastName": "Brown",
+        "macAddress": "12:a3:d3:6f:5c:5b",
+        "maidenName": "",
+        "password": "sophiabpass",
+        "phone": "+81 210-652-2785",
+        "role": "admin",
+        "ssn": "638-461-822",
+        "university": "Pepperdine University",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",
+        "username": "sophiab",
+        "weight": 52.6
+      }
+    ]
+  }
+}
