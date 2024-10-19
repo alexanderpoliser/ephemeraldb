@@ -78,12 +78,12 @@ After launching the program, you'll see a menu with the following options:
 
 - **Save bucket to file:**  
   - Select option 4.
-  - Provide the bucket name and the desired filename (seting `.json` as the file format).
+  - Provide the bucket name and the desired filename (setting `.json` as the file format).
   - The bucket will be saved in the `data/` directory.
 
 - **Load bucket from file:**  
   - Select option 5.
-  - Provide the bucket name and the filename (seting `.json` as the file format) to load from.
+  - Provide the bucket name and the filename (setting `.json` as the file format) to load from.
 
 ---
 
