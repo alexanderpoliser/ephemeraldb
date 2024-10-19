@@ -1,3 +1,6 @@
+
+![ephemeraldb](https://github.com/user-attachments/assets/ee1c6518-53aa-4346-b8c6-ff5cb21f63a6)
+
 # NoSQL Database in Go  
 
 This project provides a simple NoSQL database implementation in Go. It offers basic functionalities such as storing, retrieving, deleting data, and persisting buckets in JSON files. Additionally, the interactive menu allows users to manage data directly through the terminal.
